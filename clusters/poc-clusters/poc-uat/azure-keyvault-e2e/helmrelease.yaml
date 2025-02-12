@@ -8,7 +8,12 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: ./apps/azure-keyvault-e2e/charts/azure-keyvault-e2e
+      chart: azure-keyvault-e2e
+      version: "1.0.0"
+      sourceRef:
+        kind: GitRepository
+        name: poc-flux-repo
+        namespace: flux-system
   values:
     image:
       repository: saipocregistry.azurecr.io/azure-keyvault-e2e
