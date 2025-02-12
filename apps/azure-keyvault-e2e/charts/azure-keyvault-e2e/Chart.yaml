@@ -1,0 +1,5 @@
+apiVersion: v2
+name: azure-keyvault-e2e
+description: Helm chart for azure-keyvault-e2e microservice
+version: 1.0.0
+appVersion: "latest"

@@ -1,0 +1,18 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: azure-keyvault-e2e
+  namespace: poc-uat
+spec:
+  releaseName: azure-keyvault-e2e
+  interval: 1m
+  chart:
+    spec:
+      chart: ./apps/azure-keyvault-e2e/charts/azure-keyvault-e2e
+  values:
+    image:
+      repository: saipocregistry.azurecr.io/azure-keyvault-e2e
+      tag: latest
+    env:
+      SPRING_PROFILES_ACTIVE: uat
+    replicaCount: 2
