@@ -17,7 +17,7 @@ spec:
   values:
     image:
       repository: saipocregistry.azurecr.io/azure-keyvault-e2e
-      tag: latest
+      tag: fc711c2
     env:
       SPRING_PROFILES_ACTIVE: uat
     replicaCount: 2
